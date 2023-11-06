@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "music-sharing-api"
+version = "0.1.0"
+description = "A back-end for a music sharing social media that utilizes the spotify api"
+authors = ["HouseAlex <houseah@mail.uc.edu>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
