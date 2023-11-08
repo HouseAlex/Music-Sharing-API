@@ -5,10 +5,14 @@ from src.domain.repositories.IAccount import IAccount
 
 @dataclass
 class AccountService:
-    IAccount: IAccount
+    account: IAccount
 
-    def addEntry(self, content: str) -> str:
+    def AddEntry(self, content: str) -> str:
         #placeholder
-        entry = Account.AddAccount(content=content)
-        return 
+        entry = Account.AddAccount(content)
+        self.account.add(entry)
+        return entry.id
+    
+    def get(self, id: str) -> Account:
+        return self.account.get(id)
     
