@@ -13,6 +13,7 @@ router = APIRouter(
     responses={404: {"description": "Not Found"}}
 )
 
+@router.get("/")
 async def AddAccount(account: AddAccount) -> str:
     return accountService.AddEntry(account.accountName)
 

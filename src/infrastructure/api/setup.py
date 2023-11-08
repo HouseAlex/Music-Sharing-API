@@ -1,8 +1,9 @@
 from fastapi import FastAPI
 from fastapi.openapi.utils import get_openapi
 from container import ApplicationContainer
-from api.controllers import AccountController
 from typing import Any
+
+from infrastructure.api.controllers import AccountController
 
 def Setup(app: FastAPI, container: ApplicationContainer) -> None:
 
@@ -10,7 +11,7 @@ def Setup(app: FastAPI, container: ApplicationContainer) -> None:
     app.include_router(AccountController.router)
 
     #Inject Dependencies
-    container.wire(
+    container.wiring_config(
         modules=[
             AccountController,
         ]

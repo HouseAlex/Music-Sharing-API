@@ -2,8 +2,8 @@ from dataclasses import dataclass
 from pathlib import Path
 import pickle
 
-from src.domain.Account import Account
-from src.domain.repositories.IAccount import IAccount
+from domain.Account import Account
+from domain.repositories.IAccount import IAccount
 
 
 class AccountNotFound(Exception):

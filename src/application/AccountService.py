@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 
-from src.domain.Account import Account
-from src.domain.repositories.IAccount import IAccount
+from domain.Account import Account
+from domain.repositories.IAccount import IAccount
 
 @dataclass
 class AccountService:
