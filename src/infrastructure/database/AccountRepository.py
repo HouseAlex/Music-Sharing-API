@@ -11,9 +11,9 @@ class AccountNotFound(Exception):
 
 @dataclass
 class AccountRepository(IAccount):
-    storageDir: str
     
     def get(self, id: str) -> Account:
+        """
         try:
             entry: Account
             with open(Path(self.storageDir) / id, mode="rb") as entryFile:
@@ -21,7 +21,12 @@ class AccountRepository(IAccount):
             return entry
         except Exception:
             raise AccountNotFound()
-        
+        """
+        raise AccountNotFound()
+
     def add(self, entry: Account) -> None:
+        """
+        
         with open(Path(self.storageDir) / id, mode="rb") as entryFile:
             pickle.dump(entry, entryFile)
+        """

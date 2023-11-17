@@ -1,9 +1,8 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Path
 import uvicorn
 
 from container import ApplicationContainer
 from infrastructure.api.setup import Setup
-
 
 def init() -> FastAPI:
     container = ApplicationContainer()
