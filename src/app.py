@@ -24,8 +24,9 @@ def start() -> None:
     app = init()
     uvicorn.run(
         app,
-        host="0.0.0.0",
+        host="localhost",
         port=8080,
+        #uds="/docs",
     )
 
 if __name__ == "__main__":
